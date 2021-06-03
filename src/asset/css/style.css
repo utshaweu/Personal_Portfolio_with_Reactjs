@@ -1,0 +1,765 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none!important;
+}
+ul,ol{
+  list-style-type: none;
+}
+img{
+  vertical-align: middle;
+  border: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Quicksand', sans-serif;
+}
+p,a,span,ul,ol,.form-control,button{
+  font-family: 'Work Sans', sans-serif;
+}
+body{
+  background: #2a2a2a!important;
+}
+/* =================================================================================================
+                                              Banner Part Css
+==================================================================================================== */
+.Banner{
+  background: url(../images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.Banner::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+}
+.BannerBg{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+.BannerContent h1{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+}
+.BannerContent span{
+  color: #22cd6f;
+  font-weight: 900;
+}
+.BannerContent p{
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+.BannerContent p::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 100%;
+  bottom: -30px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(242, 243, 244), rgba(0, 0, 0, 0));
+}
+.BannerClipSvg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+}
+.BannerClipSvg svg{
+  fill: #2a2a2a;
+}
+
+/* ================================================================================================
+                                              About Part Css
+================================================================================================= */
+.About{
+  padding-top: 70px;
+  padding-bottom: 150px;
+  position: relative;
+}
+.BannerClipSvg2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 11;
+}
+.BannerClipSvg2 svg{
+  fill: #202020;
+}
+.AboutContent{
+  background: #2a2a2a;
+  border-radius: 5px;
+  padding: 50px;
+  /* box-shadow: 10px 10px 100px rgb(0 0 0 / 10%); */
+  border: 1px solid #3b3e3e;
+  transition: all linear .3s;
+}
+.AboutContent:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+  border: 1px solid rgb(34, 205, 111,.2);
+  background: #202020;
+}
+.AboutContent h2{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+.AboutContent p{
+  color: #6e7373;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: justify;
+  margin-top: 15px;
+}
+.SocialIcon a{
+  color: #fff;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: all linear .3s;
+}
+.SocialIcon a:hover{
+  color: #22cd6f;
+}
+.AboutImg{
+  border: 1px solid #3b3e3e;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+  transition: all linear .3s;
+}
+/* .AboutContent:hover .AboutImg{
+  box-shadow: 10px 10px 100px rgb(0 0 0 / 10%);
+} */
+.AboutImg img{
+  border-radius: 50%;
+}
+.Border{
+  border: 5px solid #2a2a2a;
+  border-radius: 50%;
+}
+
+/* ===============================================================================================
+                                             Services Part Css
+================================================================================================= */
+.Services{
+  padding-top: 50px;
+  padding-bottom: 120px;
+  background: #202020;
+  position: relative;
+}
+.BannerClipSvg3{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 11;
+}
+.BannerClipSvg3 svg{
+  fill: #2a2a2a;
+}
+.CommonTitle{
+  position: relative;
+  z-index: 2;
+  margin-bottom: 70px;
+}
+.CommonTitle p{
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: 500;
+}
+.CommonTitle h6{
+  font-size: 60px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(34, 205, 111,.15);
+  /* -webkit-text-stroke: 1px rgb(255, 255, 255,.15); */
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.ServicesItem{
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid #3b3e3e;
+  margin-bottom: 30px;
+  transition: all linear .3s;
+}
+.ServicesItem:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+  border: 1px solid rgb(34, 205, 111,.2);
+  background: #2a2a2a;
+}
+.ServicesItem h6{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.ServicesItem p{
+  color: #6e7373;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================================
+                                             Resume Part Css
+============================================================================================ */
+.Resume{
+  padding-top: 50px;
+  padding-bottom: 120px;
+  background: #2a2a2a;
+  position: relative;
+}
+.BannerClipSvg4{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 11;
+}
+.BannerClipSvg4 svg{
+  fill: #202020;
+}
+.ResumeTitle{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+.ResumeItem{
+  padding: 25px;
+  border-radius: 5px;
+  border: 1px solid #3b3e3e;
+  background: rgba(30, 30, 30,.1);
+  margin-bottom: 30px;
+  transition: all linear .3s;
+}
+.ResumeItem:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+  border: 1px solid rgb(34, 205, 111,.2);
+  background: #202020;
+}
+.ResumeItem h6{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.ResumeItem span{
+  color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 500;
+  background: #22cd6f;
+  padding: 2px 12px;
+  border-radius: 6px;
+}
+.ResumeItem p{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.ResumeItem p a{
+  color: #6e7373;
+  text-decoration: none;
+  transition: all linear .3s;
+}
+.ResumeItem p a:hover{
+  color: #22cd6f;
+}
+.ResumeItem .progress{
+  height: .5rem;
+  background: rgba(255,255,255,.1);
+  margin-bottom: 20px;
+}
+.ResumeItem .progress:nth-last-child(1){
+  margin-bottom: 5px;
+}
+.ResumeItem .progress-bar{
+  background: #22cd6f;
+}
+
+/* ==========================================================================================
+                                         Portfolio Part Css
+============================================================================================ */
+.Portfolio{
+  padding-top: 50px;
+  padding-bottom: 150px;
+  background: #202020;
+  position: relative;
+}
+.BannerClipSvg5{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 11;
+}
+.BannerClipSvg5 svg{
+  fill: #2a2a2a;
+}
+.PortfolioItem{
+  padding: 25px;
+  background: #2a2a2a;
+  border-radius: 5px;
+  border: 1px solid #3b3e3e;
+  margin-right: 30px;
+  position: relative;
+}
+.PortfolioItem img{
+  width: 100%;
+}
+.PortfolioItem .Overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  border-radius: 5px;
+  background: #22cd6f;
+  padding: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: all linear .6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.PortfolioItem:hover .Overlay{
+  opacity: 1;
+  height: 100%;
+}
+.PortfolioItem .Overlay h6{
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: capitalize;
+}
+.PortfolioItem .Overlay a{
+  font-size: 20px;
+  color: #22cd6f;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+}
+
+
+/* ==========================================================================================
+                                            Hire Part Css
+============================================================================================ */
+.Hire{
+  padding-top: 80px;
+  padding-bottom: 150px;
+  position: relative;
+}
+.BannerClipSvg6{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 11;
+}
+.BannerClipSvg6 svg{
+  fill: #202020;
+}
+.HireContent h6{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.HireContent h6:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 100%;
+  bottom: -15px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(242, 243, 244), rgba(0, 0, 0, 0));
+}
+.HireContent a{
+  color: #f5f5f5;
+  border: 1px solid hsla(0,0%,40%,.8);
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all linear .3s;
+}
+.HireContent a:hover{
+  border: 1px solid #22cd6f;
+  background: #22cd6f;
+  color: #fff;
+}
+
+/* ===========================================================================================
+                                            Contact Part Css
+============================================================================================= */
+.Contact{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #202020;
+  position: relative;
+}
+.ContactTitle{
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 15px;
+}
+.ContactItem{
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #3b3e3e;
+  margin-bottom: 30px;
+  background: rgba(30, 30, 30,.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all linear .3s;
+}
+.ContactItem:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+  border: 1px solid rgb(34, 205, 111,.2);
+  background: #2a2a2a;
+}
+.ContactItem .Icon{
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.ContactItem h5{
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 18px;
+}
+.ContactItem p{
+  color: #6e7373;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+.ContactItem p a{
+  color: #6e7373;
+}
+.Map{
+  margin-bottom: 30px;
+}
+.Map iframe{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+}
+.ContactForm{
+  position: relative;
+}
+.ContactForm .form-control{
+  height: calc(2.3em + .75rem + 2px);
+  border-radius: 5px;
+  border: 1px solid #3b3e3e;
+  background: #1e1e1e;
+  margin-bottom: 30px;
+}
+.ContactForm .form-control:focus{
+  background: #1e1e1e;
+  border: 1px solid #22cd6f;
+  box-shadow: none;
+  color: #f5f5f5;
+}
+.ContactForm textarea.form-control{
+  height: 150px!important;
+}
+.FormBtn .btn{
+  background: #22cd6f;
+  border-color: #22cd6f;
+  padding: 10px 35px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all linear .3s;
+}
+.FormBtn .btn:hover{
+  background: transparent;
+  border-color: #22cd6f;
+}
+
+/* =========================================================================================
+                                    Footer Bottom Part Css
+============================================================================================ */
+.FooterBottom{
+  padding: 20px 0;
+}
+.FooterBottom h6{
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+/* ==========================================================================================
+                                     Back To Top Part Css
+============================================================================================ */
+.CursorPointer{
+  cursor: pointer;
+}
+.ScrollToTop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: #2a2a2a;
+  border: 1px solid #3b3e3e;
+  color: #fff;
+  z-index: 99999;
+}
+.ScrollToTop .Up{
+  margin-top: 15px;
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+@keyframes scrollTop{
+  from{
+    transform: translateY(3px);
+  }
+  to{
+    transform: translateY(-1px);
+  }
+}
+
+/* ==========================================================================================
+                                          Loader Part Css
+============================================================================================= */
+.Loader .css-fpqs8j {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #202020;
+}
+
+/* ===============================================================================================
+                                        Scroll Indicator Part Css
+============================================================================================== */
+.ScrollContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 999999;
+}
+.ScrollContainer .Indicator{
+  height: 100%;
+  background: #22cd6f;
+}
+
+
+/* =============================================================================================
+                                           Responsive Part Css
+================================================================================================ */
+@media (max-width: 320px){
+   .BannerContent h1{
+     font-size: 33px!important;
+   }
+   .BannerContent p{
+     font-size: 28px!important;
+   }
+   .BannerClipSvg{
+     bottom: -1px;
+   }
+   .BannerClipSvg2{
+     bottom: -1px;
+   }
+   .BannerClipSvg3{
+    bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg5{
+    bottom: -1px;
+  }
+  .BannerClipSvg6{
+    bottom: -1px;
+  }
+   .CommonTitle p{
+    font-size: 13px!important;
+   }
+   .CommonTitle h6 {
+    font-size: 20px!important;
+    top: -2px!important;
+   }
+}
+
+
+@media (max-width: 575.98px) { 
+  .BannerContent h1 {
+    font-size: 40px;
+  }
+  .BannerContent p{
+    font-size: 30px;
+  }
+  .AboutContent{
+    text-align: center;
+  }
+  .AboutImg{
+    margin-top: 20px;
+  }
+  .CommonTitle p{
+    font-size: 16px;
+  }
+  .CommonTitle h6{
+    font-size: 31px;
+    top: -7px;
+  }
+ }
+ 
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .BannerClipSvg{
+    bottom: -1px;
+  }
+  .BannerClipSvg2{
+    bottom: -1px;
+  }
+  .BannerClipSvg3{
+   bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg5{
+    bottom: -1px;
+  }
+  .BannerClipSvg6{
+    bottom: -1px;
+  }
+  .AboutContent{
+    text-align: center;
+  }
+  .AboutImg{
+    margin-top: 20px;
+  }
+  .CommonTitle p{
+    font-size: 18px;
+  }
+  .CommonTitle h6{
+    font-size: 37px;
+    top: -8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .BannerClipSvg{
+    bottom: -1px;
+  }
+  .BannerClipSvg2{
+    bottom: -1px;
+  }
+  .BannerClipSvg3{
+   bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg5{
+    bottom: -1px;
+  }
+  .BannerClipSvg6{
+    bottom: -1px;
+  }
+  .CommonTitle h6{
+    font-size: 51px;
+    top: -14px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  .BannerClipSvg{
+    bottom: -1px;
+  }
+  .BannerClipSvg2{
+    bottom: -1px;
+  }
+  .BannerClipSvg3{
+   bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg4{
+    bottom: -1px;
+  }
+  .BannerClipSvg5{
+    bottom: -1px;
+  }
+  .BannerClipSvg6{
+    bottom: -1px;
+  }
+  .ContactItem p{
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
