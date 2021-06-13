@@ -1,0 +1,126 @@
+body.light-mode .BannerClipSvg svg{
+  fill: #ffffff;
+}
+body.light-mode .About{
+  background: #ffffff;
+}
+body.light-mode .AboutContent{
+  background: #ffffff;
+  box-shadow: 10px 10px 100px rgb(0 0 0 / 10%);
+  border: 1px solid #f7f7f7;
+}
+body.light-mode .BannerClipSvg2 svg{
+  fill: #f7f7f7;
+}
+body.light-mode .AboutContent h2{
+  color: #333;
+}
+body.light-mode .SocialIcon a{
+  color: #333;
+}
+body.light-mode .SocialIcon a:hover{
+  color: #22cd6f;
+}
+body.light-mode .AboutImg{
+  border: 1px solid #dee2e6;
+}
+body.light-mode .Border{
+  border: 5px solid #f7f7f7;
+}
+body.light-mode .Services{
+  background: #f7f7f7;
+}
+body.light-mode .BannerClipSvg3 svg{
+  fill: #ffffff;
+}
+body.light-mode .CommonTitle p{
+  color: #333;
+}
+body.light-mode .CommonTitle h6{
+  -webkit-text-stroke: 1px rgb(34, 205, 111,.35);
+}
+body.light-mode .ServicesItem{
+  background: #ffffff;
+  border: 1px solid #f7f7f7;
+}
+body.light-mode .ServicesItem h6{
+  color: #22cd6f;
+}
+body.light-mode .Resume{
+  background: #ffffff;
+}
+body.light-mode .BannerClipSvg4 svg{
+  fill: #f7f7f7;
+}
+body.light-mode .ResumeTitle{
+  color: #333;
+}
+body.light-mode .ResumeItem{
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+}
+body.light-mode .ResumeItem h6{
+  color: #333;
+}
+body.light-mode .ResumeItem .progress{
+  background: #f7f7f7;
+}
+body.light-mode .Portfolio{
+  background: #f7f7f7;
+}
+body.light-mode .BannerClipSvg5 svg{
+  fill: #ffffff;
+}
+body.light-mode .PortfolioItem{
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+}
+body.light-mode .Hire{
+  background: #ffffff;
+}
+body.light-mode .BannerClipSvg6 svg{
+  fill: #f7f7f7;
+}
+body.light-mode .HireContent h6{
+  color: #333;
+}
+body.light-mode .HireContent h6:after{
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
+}
+body.light-mode .HireContent a{
+  color: #333;
+}
+body.light-mode .Contact{
+  background: #f7f7f7;
+}
+body.light-mode .ContactTitle{
+  color: #333;
+}
+body.light-mode .ContactItem{
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+}
+body.light-mode .ContactItem .Icon{
+  color: #22cd6f;
+}
+body.light-mode .ContactItem h5{
+  color: #333;
+}
+body.light-mode .ContactForm .form-control{
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+}
+body.light-mode .ContactForm .form-control:focus{
+  color: #333;
+}
+body.light-mode .FooterBottom{
+  background: #ffffff;
+}
+body.light-mode .FooterBottom h6{
+  color: #22cd6f;
+}
+body.light-mode .ScrollToTop{
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  color: #22cd6f;
+}

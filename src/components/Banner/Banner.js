@@ -1,13 +1,17 @@
-import React, { Component, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import '../../asset/css/style.css';
 import '../../asset/css/bootstrap.min.css';
 import {Container,Row,Col} from "react-bootstrap";
 import { motion } from "framer-motion";
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
-export default class Banner extends Component {
-  render() {
+const Banner = () => {
+
+  const ThemeSwitcher = useThemeSwitcher();
+
     return (
       <Fragment>
+        {ThemeSwitcher}
         <Container fluid={true} className="Banner">
           <Row className="BannerBg text-center">
             <Col lg={12}>
@@ -29,5 +33,6 @@ export default class Banner extends Component {
         </Container>
       </Fragment>
     )
-  }
 }
+
+export default Banner;

@@ -10,6 +10,7 @@ import FooterBottom from './components/FooterBottom/FooterBottom';
 import BackToTop from './components/BackToTop/BackToTop';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator';
+import './asset/css/light.css';
 
 function App() {
 

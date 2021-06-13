@@ -19,7 +19,7 @@ img{
 h1,h2,h3,h4,h5,h6{
   font-family: 'Quicksand', sans-serif;
 }
-p,a,span,ul,ol,.form-control,button{
+p,a,span,ul,ol,.form-control,button,small{
   font-family: 'Work Sans', sans-serif;
 }
 body{
@@ -605,6 +605,27 @@ body{
   background: #22cd6f;
 }
 
+/* =============================================================================================
+                                          Dark/Light Mode Part Css
+============================================================================================== */
+.cursor-pointer2{
+  position: fixed;
+  right: 30px;
+  top: 30px; 
+  z-index: 999;
+  background: #22cd6f;
+  padding: 8px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.cursor-pointer2 small{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.cursor-pointer2:hover{
+  color: #fff;
+}
 
 /* =============================================================================================
                                            Responsive Part Css
