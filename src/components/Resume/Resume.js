@@ -141,7 +141,7 @@ const Resume = () => {
                     animate={resumeAnimation5}
                   >
                     <h6>Web Designer</h6>
-                    <span>2020-Present</span>
+                    <span>2020-2021</span>
                     <p><a href="https://shebawebtech.com/" target="_blank">SheBa Web Technology LLC</a></p>
                   </motion.div>
                 </Col>
