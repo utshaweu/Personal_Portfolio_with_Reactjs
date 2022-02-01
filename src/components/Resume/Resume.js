@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Fragment, useEffect } from 'react'
 import { Container,Row,Col } from 'react-bootstrap'
 import ProgressBar from 'react-bootstrap/ProgressBar'
@@ -15,6 +16,7 @@ const Resume = () => {
   const resumeAnimation3 = useAnimation();
   const resumeAnimation4 = useAnimation();
   const resumeAnimation5 = useAnimation();
+  const resumeAnimation6 = useAnimation();
 
   const progressAnimation1 = useAnimation();
   const progressAnimation2 = useAnimation();
@@ -51,6 +53,12 @@ const Resume = () => {
           duration: 0.5, delay: .6
         }
       });
+      resumeAnimation6.start({
+        opacity: 1,
+        transition:{
+          duration: 0.5, delay: .7
+        }
+      });
       progressAnimation1.start({
         opacity: 1,
         transition:{
@@ -80,6 +88,9 @@ const Resume = () => {
       resumeAnimation5.start({
         opacity: 0,
       });
+      resumeAnimation6.start({
+        opacity: 0,
+      });
       progressAnimation1.start({
         opacity: 0,
       });
@@ -88,6 +99,7 @@ const Resume = () => {
       });
     }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[inView]);
 
 
@@ -143,6 +155,13 @@ const Resume = () => {
                     <h6>Web Designer</h6>
                     <span>2020-2021</span>
                     <p><a href="https://shebawebtech.com/" target="_blank">SheBa Web Technology LLC</a></p>
+                  </motion.div>
+                  <motion.div className="ResumeItem"
+                    animate={resumeAnimation6}
+                  >
+                    <h6>Frontend Software Developer (Intern)</h6>
+                    <span>2021-Present</span>
+                    <p><a href="https://ibos.io/" target="_blank">iBOS Limited</a></p>
                   </motion.div>
                 </Col>
               </Row>

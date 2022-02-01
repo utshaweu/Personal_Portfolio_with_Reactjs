@@ -30,6 +30,7 @@ function useThemeSwitcher() {
     }, [mode]);
 
     return (
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
         <a
             className="cursor-pointer2"
             onClick={() =>
