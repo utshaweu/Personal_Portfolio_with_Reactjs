@@ -68,6 +68,7 @@ const Contact = () => {
         opacity: 0,
       });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[inView]);
 
     return (
@@ -91,7 +92,7 @@ const Contact = () => {
                   >
                     <FontAwesomeIcon icon={faMapMarkedAlt} className="Icon"/>
                     <h5>Address</h5>
-                    <p>15A/8 Tikka Para, Mohammadpur</p>
+                    <p>Sekhertek - 11, House - 29, Dhaka</p>
                   </motion.div>
                 </Col>
                 <Col lg={4} md={6}>
@@ -119,7 +120,7 @@ const Contact = () => {
                   <motion.div className="Map"
                     animate={footerAnimation4}
                   >
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.4105138699488!2d90.35837481486134!3d23.768391794005947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0a6acc0c705%3A0xa7325b1dc97e3c3f!2s15a%2C%208%20Tikka%20Para%20Rd%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1622371277722!5m2!1sen!2sbd"></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.464235764701!2d90.35547317513183!3d23.766477588159365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0a1af311d05%3A0xcc3cccc9c65b0522!2s11%20Shakhertek%20Main%20Rd%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1706300382965!5m2!1sen!2sbd"></iframe>
                   </motion.div>
                 </Col>
                 <Col lg={12}>

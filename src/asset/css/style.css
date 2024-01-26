@@ -83,7 +83,7 @@ body{
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -1px;
   z-index: 11;
 }
 .BannerClipSvg svg{
@@ -101,7 +101,7 @@ body{
 .BannerClipSvg2{
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   z-index: 11;
 }
@@ -173,7 +173,7 @@ body{
 .BannerClipSvg3{
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   z-index: 11;
 }
@@ -242,7 +242,7 @@ body{
 .BannerClipSvg4{
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   z-index: 11;
 }
@@ -321,7 +321,7 @@ body{
 .BannerClipSvg5{
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   z-index: 11;
 }
@@ -390,7 +390,7 @@ body{
 .BannerClipSvg6{
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   z-index: 11;
 }

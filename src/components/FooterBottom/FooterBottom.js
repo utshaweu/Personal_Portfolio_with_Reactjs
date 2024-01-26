@@ -8,7 +8,7 @@ export default class FooterBottom extends Component {
         <Container fluid={true} className="FooterBottom">
           <Row>
             <Col lg={12}>
-              <h6>© Sajib 2022 | All Right Reserved</h6>
+              <h6>© Sajib {new Date().getFullYear()} | All Right Reserved</h6>
             </Col>
           </Row>
         </Container>
