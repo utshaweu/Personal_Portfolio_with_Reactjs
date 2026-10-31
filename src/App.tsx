@@ -4,6 +4,7 @@ import Banner from './components/Banner/Banner';
 import Services from './components/Services/Services';
 import Resume from './components/Resume/Resume';
 import Portfolio from './components/Portfolio/Portfolio';
+import Certificates from './components/Certificates/Certificates';
 import Hire from './components/Hire/Hire';
 import Contact from './components/Contact/Contact';
 import FooterBottom from './components/FooterBottom/FooterBottom';
@@ -47,6 +48,7 @@ function App() {
             <Services/>
             <Resume/>
             <Portfolio/>
+            <Certificates/>
             <Hire/>
             <Contact/>
             <FooterBottom/>

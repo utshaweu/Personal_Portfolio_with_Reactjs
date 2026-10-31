@@ -72,6 +72,19 @@ body.light-mode .PortfolioItem{
   background: #ffffff;
   border: 1px solid #dee2e6;
 }
+body.light-mode .Certificates{
+  background: #ffffff;
+}
+body.light-mode .CertificateItem{
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+}
+body.light-mode .CertificateItem h6{
+  color: #333;
+}
+body.light-mode .CertificateImg{
+  background: #f7f7f7;
+}
 body.light-mode .Hire{
   background: #ffffff;
 }
