@@ -62,9 +62,6 @@ body.light-mode .ResumeItem{
 body.light-mode .ResumeItem h6{
   color: #333;
 }
-body.light-mode .ResumeItem .progress{
-  background: #f7f7f7;
-}
 body.light-mode .Portfolio{
   background: #f7f7f7;
 }

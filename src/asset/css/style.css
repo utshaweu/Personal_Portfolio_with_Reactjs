@@ -297,16 +297,23 @@ body{
 .ResumeItem p a:hover{
   color: #22cd6f;
 }
-.ResumeItem .progress{
-  height: .5rem;
-  background: rgba(255,255,255,.1);
-  margin-bottom: 20px;
+.SkillCard{
+  height: calc(100% - 30px);
+  padding: 20px 10px;
+  text-align: center;
 }
-.ResumeItem .progress:nth-last-child(1){
-  margin-bottom: 5px;
+.SkillCard img{
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  transition: transform linear .3s;
 }
-.ResumeItem .progress-bar{
-  background: #22cd6f;
+.SkillCard:hover img{
+  transform: scale(1.1);
+}
+.SkillCard h6{
+  font-size: 15px;
+  margin-bottom: 0;
 }
 
 /* ==========================================================================================
@@ -599,20 +606,23 @@ body{
 .cursor-pointer2{
   position: fixed;
   right: 30px;
-  top: 30px; 
+  top: 30px;
   z-index: 999;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #22cd6f;
-  padding: 8px 25px;
-  cursor: pointer;
-  border-radius: 30px;
-}
-.cursor-pointer2 small{
   color: #fff;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s;
 }
 .cursor-pointer2:hover{
-  color: #fff;
+  transform: rotate(20deg) scale(1.1);
 }
 
 /* =============================================================================================

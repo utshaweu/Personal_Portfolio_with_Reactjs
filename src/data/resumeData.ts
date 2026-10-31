@@ -52,51 +52,21 @@ const experienceData = [
   },
 ];
 
-const skillsData = {
-  dataOne: [
-    {
-      id: 1,
-      title: "Html",
-      progressBar: 90,
-    },
-    {
-      id: 2,
-      title: "Css",
-      progressBar: 80,
-    },
-    {
-      id: 3,
-      title: "Bootstrap",
-      progressBar: 85,
-    },
-    {
-      id: 4,
-      title: "JavaScript",
-      progressBar: 70,
-    },
-  ],
-  dataTwo: [
-    {
-      id: 1,
-      title: "jQuery",
-      progressBar: 50,
-    },
-    {
-      id: 2,
-      title: "Reactjs",
-      progressBar: 70,
-    },
-    {
-      id: 3,
-      title: "Ant Design",
-      progressBar: 60,
-    },
-    {
-      id: 4,
-      title: "Material UI",
-      progressBar: 65,
-    },
-  ],
-};
+const deviconUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons";
+
+const skillsData = [
+  { id: 1, title: "HTML5", icon: `${deviconUrl}/html5/html5-original.svg` },
+  { id: 2, title: "CSS3", icon: `${deviconUrl}/css3/css3-original.svg` },
+  { id: 3, title: "JavaScript", icon: `${deviconUrl}/javascript/javascript-original.svg` },
+  { id: 4, title: "TypeScript", icon: `${deviconUrl}/typescript/typescript-original.svg` },
+  { id: 5, title: "React.js", icon: `${deviconUrl}/react/react-original.svg` },
+  { id: 6, title: "Redux Toolkit", icon: `${deviconUrl}/redux/redux-original.svg` },
+  { id: 7, title: "REST API", icon: `${deviconUrl}/openapi/openapi-original.svg` },
+  { id: 8, title: "Tailwind CSS", icon: `${deviconUrl}/tailwindcss/tailwindcss-original.svg` },
+  { id: 9, title: "Supabase", icon: `${deviconUrl}/supabase/supabase-original.svg` },
+  { id: 10, title: "Ant Design", icon: `${deviconUrl}/antdesign/antdesign-original.svg` },
+  { id: 11, title: "Material UI", icon: `${deviconUrl}/materialui/materialui-original.svg` },
+  { id: 12, title: "Git", icon: `${deviconUrl}/git/git-original.svg` },
+];
 
 export { educationData, experienceData, skillsData };

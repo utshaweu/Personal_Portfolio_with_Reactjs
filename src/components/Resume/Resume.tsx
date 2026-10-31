@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Fragment, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProgressBar from "react-bootstrap/ProgressBar";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { educationData, experienceData, skillsData } from "../../data/resumeData";
@@ -17,9 +16,6 @@ const Resume = () => {
   const resumeAnimation4 = useAnimation();
   const resumeAnimation5 = useAnimation();
   const resumeAnimation6 = useAnimation();
-
-  const progressAnimation1 = useAnimation();
-  const progressAnimation2 = useAnimation();
 
   useEffect(() => {
     if (inView) {
@@ -65,20 +61,6 @@ const Resume = () => {
           delay: 0.7,
         },
       });
-      progressAnimation1.start({
-        opacity: 1,
-        transition: {
-          duration: 0.5,
-          delay: 0.8,
-        },
-      });
-      progressAnimation2.start({
-        opacity: 1,
-        transition: {
-          duration: 0.5,
-          delay: 0.9,
-        },
-      });
     }
     if (!inView) {
       resumeAnimation1.start({
@@ -97,12 +79,6 @@ const Resume = () => {
         opacity: 0,
       });
       resumeAnimation6.start({
-        opacity: 0,
-      });
-      progressAnimation1.start({
-        opacity: 0,
-      });
-      progressAnimation2.start({
         opacity: 0,
       });
     }
@@ -159,30 +135,22 @@ const Resume = () => {
                 ))}
               </Col>
             </Row>
-            <Row ref={ref}>
+            <Row ref={ref} className="justify-content-center">
               <Col lg={12}>
                 <h5 className="ResumeTitle">Coding Skills</h5>
               </Col>
-              <Col lg={6} md={6}>
-                <motion.div className="ResumeItem" animate={progressAnimation1}>
-                  {skillsData?.dataOne?.map((item) => (
-                    <Fragment key={item?.id}>
-                      <h6>{item?.title}</h6>
-                      <ProgressBar now={item?.progressBar} />
-                    </Fragment>
-                  ))}
-                </motion.div>
-              </Col>
-              <Col lg={6} md={6}>
-                <motion.div className="ResumeItem" animate={progressAnimation2}>
-                  {skillsData?.dataTwo?.map((item) => (
-                    <Fragment key={item?.id}>
-                      <h6>{item?.title}</h6>
-                      <ProgressBar now={item?.progressBar} />
-                    </Fragment>
-                  ))}
-                </motion.div>
-              </Col>
+              {skillsData?.map((item, index) => (
+                <Col lg={2} md={3} xs={6} key={item?.id}>
+                  <motion.div
+                    className="ResumeItem SkillCard"
+                    animate={{ opacity: inView ? 1 : 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 + index * 0.05 }}
+                  >
+                    <img src={item?.icon} alt="" />
+                    <h6>{item?.title}</h6>
+                  </motion.div>
+                </Col>
+              ))}
             </Row>
           </Container>
         </Row>

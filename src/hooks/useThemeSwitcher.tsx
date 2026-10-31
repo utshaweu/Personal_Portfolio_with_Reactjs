@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 function useThemeSwitcher() {
     const [mode, setMode] = useState(() => localStorage.getItem("mode"));
@@ -29,16 +31,20 @@ function useThemeSwitcher() {
         }
     }, [mode]);
 
+    const nextModeLabel = mode === "light" ? "Switch to dark mode" : "Switch to light mode";
+
     return (
-        // eslint-disable-next-line jsx-a11y/anchor-is-valid
-        <a
+        <button
+            type="button"
             className="cursor-pointer2"
+            aria-label={nextModeLabel}
+            title={nextModeLabel}
             onClick={() =>
                 setMode(mode => (mode === "light" ? "dark" : "light"))
             }
         >
-            <small> {mode === "light" ? "Dark" : "Light"} Mode</small>
-        </a>
+            <FontAwesomeIcon icon={mode === "light" ? faMoon : faSun} />
+        </button>
     );
 }
 
