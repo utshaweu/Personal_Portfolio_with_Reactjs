@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 import { portfolioData } from "../../data/portfolioData";
 
 export default class Portfolio extends Component {
   render() {
-    var settings = {
+    const settings: Settings = {
       className: "center",
       centerMode: true,
       centerPadding: "60px",

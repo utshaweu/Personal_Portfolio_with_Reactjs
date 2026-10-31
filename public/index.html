@@ -18,5 +18,13 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div style="width: 100%;" id="root"></div>
+
+    <!-- Static copy of the React contact form so Netlify Forms can detect it at deploy time -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

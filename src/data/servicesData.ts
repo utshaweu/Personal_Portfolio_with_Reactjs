@@ -9,38 +9,38 @@ const servicesData = [
   { id: 1,
     animateDirection: "Left",
     img: WebDesign,
-    title: "Web Design",
-    description: "Modern and mobile-ready website that will help of your marketing."
+    title: "Web App Development",
+    description: "Scalable web apps built with React and TypeScript."
   },
   { id: 2,
     animateDirection: "Middle",
     img: ResponsiveDesign,
-    title: "Responsive Design",
-    description: "Modern and mobile-ready website that will help of your marketing."
+    title: "Responsive Development",
+    description: "Mobile-first UIs that work great on every screen."
   },
   { id: 3,
     animateDirection: "Right",
     img: CreativeDesign,
-    title: "Creative Design",
-    description: "Modern and mobile-ready website that will help of your marketing."
+    title: "Problem Solving",
+    description: "Simple, clean solutions for complex requirements."
   },
   { id: 4,
     animateDirection: "Left",
     img: Psd,
-    title: "PSD/XD to Html",
-    description: "Modern and mobile-ready website that will help of your marketing."
+    title: "Design to Code",
+    description: "Turning Figma and XD designs into React components."
   },
   { id: 5,
     animateDirection: "Middle",
     img: Fast,
-    title: "Fast & Optimized",
-    description: "Modern and mobile-ready website that will help of your marketing."
+    title: "Performance Optimization",
+    description: "Fast apps through lazy loading and code splitting."
   },
   { id: 6,
     animateDirection: "Right",
     img: Pixel,
-    title: "Pixel Precision",
-    description: "Modern and mobile-ready website that will help of your marketing."
+    title: "API Integration",
+    description: "Connecting UIs to REST APIs with clean state management."
   },
 ];
 

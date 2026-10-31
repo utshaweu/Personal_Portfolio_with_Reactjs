@@ -14,7 +14,6 @@ const About = () => {
   const animation = useAnimation();
 
   useEffect(() => {
-    console.log("use effect hook, inView = ", inView);
     if (inView) {
       animation.start({
         opacity: 1,
@@ -44,8 +43,8 @@ const About = () => {
                     <Col lg={8} md={7}>
                       <h2>About Me</h2>
                       <p>
-                        I'm a hard working and dedicated professional front-end software developer/user interface with a keen eye for detail and a determination to deliver the very highest
-                        quality. I take great pride in my work, and always try to better myself with every project I work on.
+                        I'm a Frontend Engineer building fast, responsive and user-friendly web applications with React and TypeScript. Since 2020, I've been
+                        turning ideas and designs into clean, maintainable interfaces with a keen eye for detail. I take great pride in my work and keep learning with every project.
                       </p>
                       <div className="SocialIcon">
                         <a href="https://www.facebook.com/utshaweu" target="_blank" rel="noreferrer">
@@ -60,7 +59,7 @@ const About = () => {
                         <a href="https://www.instagram.com/utshaw_eu" target="_blank" rel="noreferrer">
                           <FontAwesomeIcon icon={faInstagram} />
                         </a>
-                        <a href="tel:+8801674070166">
+                        <a href="https://wa.me/8801674070166" target="_blank" rel="noreferrer">
                           <FontAwesomeIcon icon={faWhatsapp} />
                         </a>
                       </div>

@@ -16,7 +16,7 @@ const Banner = () => {
           <Col lg={12}>
             <motion.div className="BannerContent" initial={{ y: "-100vw" }} animate={{ y: 0 }} transition={{ type: "tween", ease: "backOut", duration: 2.5 }}>
               <h1>
-                Hi! I'm <span>Sajib</span> Frontend Developer
+                Hi! I'm <span>Sajib</span> Frontend Engineer
               </h1>
               <p>Based In Bangladesh.</p>
             </motion.div>

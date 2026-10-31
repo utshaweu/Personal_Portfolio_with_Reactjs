@@ -45,10 +45,10 @@ const experienceData = [
   {
     id: 6,
     animateType: 6,
-    title: "Jr. Frontend Software Developer",
-    yearRange: "2021-Present",
+    title: "Software Engineer L-1",
+    yearRange: "2022-Present",
     websiteLink: "https://ibos.io/",
-    name: "iBOS Limited",
+    name: "AKIJ iBOS",
   },
 ];
 

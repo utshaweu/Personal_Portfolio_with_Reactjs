@@ -1,9 +1,11 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, FormEvent, useEffect, useState } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkedAlt, faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+
+type FormStatus = "idle" | "sending" | "sent" | "error";
 
 const Contact = () => {
   
@@ -14,9 +16,7 @@ const Contact = () => {
   const footerAnimation = useAnimation();
   const footerAnimation2 = useAnimation();
   const footerAnimation3 = useAnimation();
-
   const footerAnimation4 = useAnimation();
-  const footerAnimation5 = useAnimation();
 
   useEffect (() => {
     if(inView){
@@ -41,12 +41,6 @@ const Contact = () => {
       footerAnimation4.start({
         opacity: 1,
         transition: {
-          duration: .7, delay: .6,
-        }
-      });
-      footerAnimation5.start({
-        opacity: 1,
-        transition: {
           duration: .7, delay: .8,
         }
       });
@@ -64,12 +58,31 @@ const Contact = () => {
       footerAnimation4.start({
         opacity: 0,
       });
-      footerAnimation5.start({
-        opacity: 0,
-      });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[inView]);
+
+  const [formStatus, setFormStatus] = useState<FormStatus>("idle");
+
+  // Netlify Forms receives this POST and emails the submission (see the static form in public/index.html)
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setFormStatus("sending");
+
+    try {
+      const response = await fetch("/", { method: "POST", body: new FormData(form) });
+
+      if (response.ok) {
+        form.reset();
+        setFormStatus("sent");
+      } else {
+        setFormStatus("error");
+      }
+    } catch {
+      setFormStatus("error");
+    }
+  };
 
     return (
       <Fragment>
@@ -92,7 +105,7 @@ const Contact = () => {
                   >
                     <FontAwesomeIcon icon={faMapMarkedAlt} className="Icon"/>
                     <h5>Address</h5>
-                    <p>Sekhertek - 11, House - 29, Dhaka</p>
+                    <p>House - 117, Boslia 40 Feet, Dhaka</p>
                   </motion.div>
                 </Col>
                 <Col lg={4} md={6}>
@@ -114,45 +127,42 @@ const Contact = () => {
                   </motion.div>
                 </Col>
                 <Col lg={12}>
-                  <h6 className="ContactTitle">My Location</h6>
-                </Col>
-                <Col lg={12}>
-                  <motion.div className="Map"
-                    animate={footerAnimation4}
-                  >
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.464235764701!2d90.35547317513183!3d23.766477588159365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0a1af311d05%3A0xcc3cccc9c65b0522!2s11%20Shakhertek%20Main%20Rd%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1706300382965!5m2!1sen!2sbd"></iframe>
-                  </motion.div>
-                </Col>
-                <Col lg={12}>
                   <h6 className="ContactTitle">Contact Form</h6>
                 </Col>
                 <Col lg={12}>
                   <motion.div className="ContactForm"
-                    animate={footerAnimation5}
+                    animate={footerAnimation4}
                   >
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
+                      <input type="hidden" name="form-name" value="contact" />
                       <Row>
                         <Col lg={6}>
                           <Form.Group>
-                            <Form.Control type="text" placeholder="Your Name *" />
+                            <Form.Control type="text" name="name" placeholder="Your Name *" required />
                           </Form.Group>
                         </Col>
                         <Col lg={6}>
                           <Form.Group>
-                            <Form.Control type="email" placeholder="Email *" />
+                            <Form.Control type="email" name="email" placeholder="Email *" required />
                           </Form.Group>
                         </Col>
                       </Row>
                       <Form.Group>
-                        <Form.Control type="text" placeholder="Your Subject..." />
+                        <Form.Control type="text" name="subject" placeholder="Your Subject..." />
                       </Form.Group>
                       <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Control as="textarea" rows={3} placeholder="Your Message..." />
+                        <Form.Control as="textarea" name="message" rows={3} placeholder="Your Message..." />
                       </Form.Group>
                       <div className="FormBtn text-center">
-                        <Button variant="primary" type="submit">
-                          Send
+                        <Button variant="primary" type="submit" disabled={formStatus === "sending"}>
+                          {formStatus === "sending" ? "Sending..." : "Send"}
                         </Button>
+                        {formStatus === "sent" && (
+                          <p className="text-success mt-3 mb-0">Thanks! Your message has been sent.</p>
+                        )}
+                        {formStatus === "error" && (
+                          <p className="text-danger mt-3 mb-0">Sorry, something went wrong. Please email me directly.</p>
+                        )}
                       </div>
                     </Form>
                   </motion.div>
