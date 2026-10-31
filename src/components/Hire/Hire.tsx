@@ -39,7 +39,7 @@ const Hire = () => {
                   <motion.div
                     animate={buttonAnimation}
                   >
-                    <a href="#">Hire Me!</a>
+                    <a href="https://wa.me/8801674070166" target="_blank" rel="noreferrer">Hire Me!</a>
                   </motion.div>
                 </div>
               </Col>
